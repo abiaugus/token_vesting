@@ -108,5 +108,8 @@ contract TokenVesting is Ownable {
             return totalBalance.mul(block.timestamp.sub(start)).div(duration);
         }
     }
+    function getTime () public view returns (uint256) {
+        return block.timestamp;
+    }
 
 }
